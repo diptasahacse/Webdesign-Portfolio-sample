@@ -1,0 +1,715 @@
+/*===================================================
+Template Name: Example
+Template URI: https://www.diptasaha.com/projects/
+Author: Dipta Saha
+Author URI: https://www.diptasaha.com
+Version: 1.0
+Description: An Awesome Personal portfolio template.
+Support: diptasoftwaresolution@gmail.com
+====================================================*/
+
+
+/*===================================================
+CSS INDEX
+----------
+1. Google Fonts
+2. Common CSS
+3. Reusable Components
+
+
+
+
+====================================================*/
+
+/* 1. Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,800;1,300&display=swap');
+
+/* 2. Common CSS */
+*{
+    margin: 0;
+    padding: 0;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+html, body {
+    color: #FFF;
+    background: #222222;
+    font-size: 62.5%;
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
+    font-family: 'Poppins', sans-serif;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+ul li a{
+    
+}
+ul li{
+    list-style-type: none;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Poppins', sans-serif;
+}
+h1{
+    font-size: 4.9rem;
+    line-height: 5.6rem;
+    font-weight: 600;
+    margin: 0;
+    
+    
+}
+h2{
+    
+}
+h3{
+    
+}
+h4 {
+    font-size: 1.6rem;
+    color: #f5f5f5;
+    font-weight: 600;
+    line-height: 1.6rem;
+    
+}
+a:link,
+a:hover {
+    text-decoration: none;
+}
+p{
+    font-size: 1.6rem;
+}
+hr{
+    border: 0;
+    border-top: .1rem solid #808080;
+    
+}
+
+
+/* 3. Reusable Components */
+.row{
+    max-width: 118rem;
+    margin: auto;
+}
+.section-title h2{
+    font-size: 2.1rem;
+    color: #f5f5f5;
+    font-weight: 600;
+    display: inline-block;
+    line-height: 1.2;
+    position: relative;
+    padding-bottom: .5rem;
+    
+
+}
+.section-title h2::before{
+    content: "";
+    display: block;
+    background: #353535;
+    height: .2rem;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.section-title h2::after{
+    content: "";
+    display: block;
+    background: #007ced;
+    height: .2rem;
+    position: absolute;
+    width: 40%;
+    bottom: 0;
+    transition: 3s;
+    
+}
+section:hover .section-title h2::after{
+    width: 60%;
+}
+
+.btn{
+    font-size: 1.6rem;
+    background: #333;
+    display: inline-block;
+    border: .2rem solid transparent;
+    padding: 1rem 3rem;
+    text-align: center;
+    text-transform: capitalize;
+    color: #fff;
+    transition: .6s;
+    cursor:pointer;
+    border-radius: 5rem;
+}
+.clear-fix::after{
+    content: '';
+    display: table;
+    clear: both;
+    
+    
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+section{
+    padding-top: 9rem;
+    padding-bottom: 4rem;
+}
+/* #. Header Section */
+#header-section{
+    overflow: hidden;
+}
+.nav-area{
+    padding-top: 2rem;
+}
+.nav-area.uk-active{
+    background: rgba(34, 34, 34, 0.82);
+    padding: 0;
+    padding: 1.6rem 0;
+}
+
+.logo{
+    width: 4.4rem;
+    height: 4.4rem;
+    line-height: 4.4rem;
+    background-color: #007CED;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-right: 8px;
+    margin-top: 4px;
+}
+.logo-text{
+    line-height: 4.4rem;
+    font-size: 2rem;
+    color: #fff;
+}
+.logo-text span:first-child{
+    font-weight: 800;
+}
+
+.menu-area ul li{
+    display: inline-block;
+    margin-right: 2rem;
+    line-height: 4.4rem;
+}
+.menu-area ul li:last-child{
+    margin-right: 0;
+}
+.menu-area ul li a{
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-style: normal;
+    color: #f5f5f5;
+    letter-spacing: 0rem;
+    text-transform: capitalize;
+    transition: .5s;
+    opacity: .5;
+}
+.menu-area ul li a:hover{
+    color: #007CED;
+    opacity: .7;
+    
+}
+.menu-area ul li a.active,
+.overlay-content ul li a.active
+{
+    color: #007CED;
+    opacity: 1;
+    
+    
+}
+
+.mobile-menu .open-btn ion-icon{
+    font-size: 3.5rem;
+    float: right;
+    margin-top: .5rem;
+    display: none;
+    
+    
+}
+.mobile-menu .open-btn ion-icon:hover{
+    cursor: pointer;
+}
+.overlay{
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.9);
+    transition: .5s;
+    z-index: 9;
+}
+.overlay .close-btn{
+    font-size: 3.5rem;
+    float: right;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    color: #fff;
+}
+.overlay-content{
+    position: relative;
+    top: 5rem;
+    overflow: hidden;
+    width: 100%;
+    text-align: center
+    
+}
+.overlay-content ul li{
+    margin-bottom: 2rem;
+}
+.overlay-content ul li:last-child{
+    margin-bottom: 0rem;
+}
+.overlay-content ul li a{
+    display: inline-block;
+    font-size: 2.5rem;
+    color: #f5f5f5;
+    text-transform: uppercase;
+    transition: .5s;
+    opacity: .5;
+    
+    
+}
+.overlay-content ul li a:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+
+
+.grid-hero-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 2rem;
+    margin: 10rem 0;
+}
+.grid-hero-item:first-child{
+    
+}
+.mylogo{
+    width: 34.4rem;
+    height: 34.4rem;
+    border-radius: 50%;
+    border: 2rem solid #444444;
+    -webkit-box-shadow: 1px 1px 29px 14px #000000; 
+    box-shadow: 1px 1px 29px 14px #000000;
+    margin: 0 auto;
+    background-image: url(img/melogo.jpg);
+    background-position: center center;
+    background-size: cover;
+    
+    
+}
+.animated-text{
+    color: #aaa;
+    font-size: 2rem;
+    
+}
+.animated-text h5{
+    color: #aaa;
+    margin: 0;
+}
+
+.ah-headline.slide .ah-words-wrapper{
+    font-weight: 300;
+}
+.grid-hero-item:first-child p{
+    font-size: 1.4rem;
+    
+}
+.grid-hero-item:last-child h1{
+    margin: 1rem 0;
+    color: #F5F5F5;
+}
+.grid-hero-item:last-child p{
+    margin: 2rem 0;
+    color: #d5d5d5;
+}
+.hero-btn{
+    
+    text-align: left;
+    margin-top: 4rem;
+    
+}
+.hero-btn div{
+    display: inline-block;
+}
+.hire-me-button{
+    margin-right: 4rem;
+    
+}
+.hire-btn{
+    border-color: #007CED;
+    transition: 1s;
+}
+.hire-btn:hover{
+    background: #007CED;
+    color: #fff;
+}
+.contact-btn{
+    border-color: #fff;
+}
+.contact-btn:hover{
+    background: #fff;
+    color: #222222;
+    
+}
+/* #. Service Section */
+#service{
+    
+}
+.grid-service-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3.5rem;
+    margin-top: 4rem;
+}
+.service-logo{
+    width: 10%;
+    
+    
+    
+}
+.service-logo i{
+    color: #007ced;
+    font-size: 4rem;
+    display: inline-block;
+}
+.service-about{
+    width: 90%;
+    padding-left: 1rem;
+
+    
+}
+.grid-service-item p{
+    font-size: 1.4rem;
+    color: #d5d5d5;
+    margin-top: 1rem;
+}
+/* #. Skill Section */
+#skill-section{
+    
+}
+.skill-bar{
+    margin: 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 2rem;
+    
+}
+.skillbar{
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      background: #444444;
+      border-radius: 1rem;
+      height: 2.5rem;
+}
+.skillbar-title{
+    position: absolute;
+    left: 0;
+    font-size: 1.3rem;
+    padding-left: 1rem;
+    right: 0;
+    margin: auto;
+    line-height: 2.5rem;
+    color: #222222;
+    
+}
+.skillbar-bar {
+      height: 100%;
+      width: 0px;
+      background: #6adcfa;
+      border-radius: 1rem;
+      display: inline-block;
+}
+
+.skill-bar-percent {
+      position: absolute;
+      right: 10px;
+      top: 0;
+      font-size: 11px;
+      height: 100%;
+      color: #ffffff;
+      line-height: 2.5rem;
+}
+.skillbar p{
+    margin-top: 0;
+}
+
+/* #. Portfolio Section */
+#portfolio-section{
+    
+    
+    
+}
+.portfolio-filter{
+    text-align: center;
+    margin:3rem 0;
+}
+.portfolio-filter ul li{
+    display: inline-block;
+    margin: .6rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    background: #333333;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    transition: 1s;
+
+}
+.portfolio-filter ul li:last-child{
+    margin-right: 0;
+}
+.portfolio-filter ul li:hover{
+    background: #007CED;
+}
+.portfolio-filter ul li.mixitup-control-active{
+    background: #007CED;
+}
+.grid-portfolio-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 2rem;
+    margin-top: 2rem;
+    
+}
+.grid-portfolio-item{
+    overflow: hidden;
+    height: 25rem;
+    position: relative;
+    
+    
+}
+.grid-portfolio-item .imgbox{
+    height: 100%;
+    width: 100%;
+}
+.grid-portfolio-item .imgbox img{
+    height: 100%;
+    width: 100%;
+    transition: 1s;
+    
+}
+.grid-portfolio-item:hover .imgbox img{
+    transform: scale(1.2);
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+.details-box{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    background: rgba(0, 0, 0, 0.49);
+    padding: 1rem;
+    transform: scale(0);
+    transition: 1.2s;
+    text-align: center;
+    
+}
+.grid-portfolio-item:hover .details-box{
+    transform: scale(1);
+}
+.details-box .port-about{
+    text-align: left;
+}
+.details-box .port-about span{
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: capitalize;
+    color: #fff;
+    
+}
+.port-about ul{
+    margin: .5rem 2rem;
+}
+.port-about ul li{
+    list-style: disc;
+    font-size: 1.3rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+.details-box span{
+    font-size: 2.5rem;
+}
+.details-box .link{
+    
+}
+.link a{
+    display: inline-block;
+    font-size: 1.2rem;
+    color: #fff;
+    margin-top: 1rem;
+    padding: .5rem 1.5rem;
+    border: .1rem solid #007CED;
+    border-radius: 5rem;
+    transition: 1s;
+    
+}
+.link a:hover{
+    background: rgba(255, 255, 255, 0.8);
+    color: #000;
+}
+.all-project-button{
+    margin-top: 5rem;
+    text-align: center;
+}
+.project-btn{
+    background: #007CED;
+    transition: 1s;
+}
+.project-btn:hover{
+    background: #fff;
+    color: #222222;
+}
+/* #. Testimonial Section */
+.grid-testimonial-container{
+    margin-top: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.grid-testimonial-item{
+    padding: 4rem;
+    
+}
+.review-box{
+    border: .1rem solid #888888;
+    position: relative;
+    padding: 3rem;
+    border-radius: 2rem;
+    
+}
+.review-box img{
+    height: 8.8rem;
+    width: 8.8rem;
+    border-radius: 50%;
+    border: .2rem solid #888888;
+    position: absolute;
+    top: -4rem;
+    left: 0;
+    right: 0;
+    margin: auto;    
+}
+.buyer-name{
+    text-align: center;
+    margin-top: 3rem;
+}
+.review-box h5{
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+.review-box p{
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    font-weight: 300;
+    font-style: italic;
+    
+    
+}
+.slick-prev {
+    left: -1.5rem;
+}
+.slick-next{
+    right: -1.5rem;
+}
+
+.slick-prev::before,
+.slick-next::before{
+    color: #007CED;
+}
+
+/* #. Project count Section */
+.grid-project-count-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 3rem;
+    margin-top: 3rem;
+    
+}
+.grid-project-count-item{
+    text-align: center;
+    background: #333333;
+    padding: 3rem 0rem;
+    border-radius: 1.5rem;
+    border: .2rem solid #444444;
+    -webkit-box-shadow: 5px 5px 31px -11px rgba(0,0,0,0.29); 
+    box-shadow: 5px 5px 31px -11px rgba(0,0,0,0.29);
+    transition: .5s;
+    
+    
+}
+.grid-project-count-item:hover{
+    transform: translateY(-1rem);
+    
+    
+}
+.grid-project-count-item ion-icon{
+    font-size: 4rem;
+    color: #0279E5;
+}
+.grid-project-count-item h6{
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    color: #fff;
+}
+.grid-project-count-item span{
+    color: #d5d5d5;
+    font-size: 48px;
+    line-height: 52px;
+    display: inline-block;
+    margin-top: 1.5rem;
+}
+/* #. Footer Section */
+#footer{
+    padding: 2rem 0rem;
+    overflow: hidden;
+    border-top: .1rem solid #333333;
+}
+.footer-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.copy-right-text{
+    text-align: right;
+}
+.copy-right-text p {
+    line-height: 21px;
+    font-size: 13px;
+}
+.social-box ul li{
+    display: inline-block;
+    margin-right: 1.5rem;
+}
+.social-box ul li a {
+    color: #dddddd;
+    line-height: 2.1rem;
+    font-size: 1.3rem;
+    opacity: .6;
+}
+.copy-right-text p{
+    color: #dddddd;
+}
+.copy-right-text a{
+    border: .1rem solid transparent;
+    font-size: 1.5rem;
+    color: #175A97;
+    transition: 1s;
+    display: inline-block;
+}
+.copy-right-text a:hover{
+    border-color: #0279E5;
+}

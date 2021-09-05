@@ -1,0 +1,88 @@
+@media only screen and (max-width:1200px){
+    .row{
+    margin: 0 2rem;
+    }
+    
+    
+}
+@media only screen and (max-width:1024px){
+    .row{
+    margin: 0 2rem;
+    }
+    .grid-portfolio-container,
+    .grid-project-count-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+}
+@media only screen and (max-width:980px){
+    .skill-bar{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .menu-area ul{
+        display: none;
+    }
+    .mobile-menu .open-btn ion-icon{
+        display: block;
+    }
+    
+    
+}
+@media only screen and (max-width:768px){
+    .grid-hero-container{
+        grid-template-columns: repeat(1,1fr);
+        
+    }
+    .animated-text h5 span{
+    text-align: center;
+    }
+    .grid-hero-item:last-child{
+        text-align: center;
+    }
+    .hero-btn{
+        margin-top: 4rem;
+        text-align: center;
+    
+    }
+    .animated-text h5{
+        text-align: center;
+    }
+    .grid-service-container {
+        grid-template-columns: 1fr;
+    
+    }
+    
+    
+}
+@media only screen and (max-width:600px){
+    .grid-portfolio-container,
+    .grid-project-count-container,.footer-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .social-box,.copy-right-text{
+        text-align: center;
+    }
+    .copy-right-text p{
+        margin-top: 1rem;
+    }
+    
+}
+@media only screen and (max-width:375px){
+    .mylogo {
+    width: 30rem;
+    height: 30rem;
+    }
+}
+@media only screen and (max-width:350px){
+    .mylogo {
+    width: 28rem;
+    height: 28rem;
+    }
+    .hire-me-button {
+    margin-right: 0rem;
+        margin-bottom: 2rem;
+    }
+    .hero-btn div {
+    display: block;
+    }
+}
